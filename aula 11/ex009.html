@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSULADO</title>
+</head>
+<body>
+    <h1>Você vem de qual pais?</h1>
+    Eu venho do(e): <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Veriicar" onclick="verpais()">
+    <div id="res">
+    </div>
+    <script>
+        function verpais() {
+            var txtp = window.document.getElementById('txtpais')
+            var res = window.document.querySelector('div#res')
+            var pais = (txtp.value)
+            res.innerHTML = `<p>Você vem do(e): <strong>${pais}</strong></p>`
+            if (pais == 'Brasil') {
+                res.innerHTML += `<p>Você é Brasileiro</p>`
+            } else {
+                res.innerHTML += `<p>Você é um estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
